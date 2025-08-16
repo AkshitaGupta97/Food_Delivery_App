@@ -1,0 +1,173 @@
+ /* Import Google fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Miniver&family=Poppins:ital,wght@0,400;0,700;0,900;1,400;1,500;1,600;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+   
+}
+
+:root {
+    --primaryOrange: #FF512F;
+    --offWhite: #f6efef;
+    --charcol: #1C1C1C;
+    --yellow: #f2930f;
+    --cream: #f6e7bb;
+    --leafGreen: #43A047;
+    --beigeBack: #e6d7b0;
+    --black: #000000f4;
+
+    
+
+}
+
+html, body {
+    height: 100vh;
+    width: 100%;
+    overflow-x: hidden; /* this will hide horizontal scroll bar */
+    scroll-behavior: smooth; /* this will make smooth scrolling */
+}
+body {
+    background: linear-gradient(135deg, var(--offWhite), var(--beigeBack));
+}
+
+a{
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+}
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+img {
+    width: 100%;
+}
+.section-content {
+    margin: 0 auto;
+    padding: 0 22px;
+  /*  max-width: var(--site-max-width);*/
+}
+.h2-underline {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    position: relative;
+    margin-bottom: 20px;
+}
+.h2-underline::after{
+    content: "";
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 80%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background-color: rgb(202, 40, 67);
+    margin-top: 5px;
+    border-radius: 5px;
+}
+
+/*  nvbar   section     */
+header {
+    position: fixed;
+    z-index:4;
+    width: 100%;
+    background-color: var(--black);
+    box-shadow: 8px 8px 10px rgb(235, 178, 178);
+}
+header .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 22px;
+}
+.navbar .nav-logo .logo-text {
+    color: var(--primaryOrange);
+}
+.navbar .nav-menu .nav-link {
+    color: var(--yellow);
+    padding: 10px 16px;
+    font-size: 600;
+    transition: 0.3s ease-in;
+}
+.navbar .nav-menu .nav-link:hover {
+    color: orange;
+    text-decoration: underline;
+    text-underline-offset: 4px; /* this will create gap between word and underline*/
+}
+.navbar .nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.navbar :where(#menu-open-btn, #menu-close-btn){
+    display: none;
+}
+
+@media screen and (max-width: 900px) {
+   
+    /* this will add blurLay effect on page, as when show-mobile-menu is clicked, the background should be blured.*/
+    body.show-mobile-menu header::before {
+        content: "";
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        backdrop-filter: blur(2px);  /* this adds, blur effect*/
+        background-color: rgba(191, 187, 187, 0.2);
+    }
+    .navbar .nav-menu {
+        display: block;
+        position: fixed;
+        left: -300px;
+        top: 0;
+        height: 100%;
+        width: 250px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: var(--beigeBack);
+        padding-top: 2rem;
+        transition: left 0.3s ease-in;       
+    }
+    body.show-mobile-menu .navbar .nav-menu {  /* here we are adding "show-mobile-menu", because we want to dispaly in screen size.*/
+        left: 0;
+    }
+    .navbar .nav-menu .nav-link {  
+        display: block;
+        margin-top: 1.4rem;
+        color: var(--charcol);
+        padding: 10px 16px;
+        font-weight: 600;
+
+    }
+    .navbar .nav-menu .nav-link:hover {
+        color: var(--leafGreen);
+        transition: 0.3s ease-in;
+
+    }
+    .navbar :where(#menu-open-btn, #menu-close-btn){
+        display: block;
+    }
+    .navbar #menu-close-btn {
+        position: absolute;
+        right: 28px;
+        top: 22px;
+        padding: 4px;
+        color: var(--yellow);
+        margin-bottom: 1rem;
+        font-size: 24px;
+    }
+    .navbar #menu-open-btn {
+        color: var(--offWhite);
+        font-size: 22px;
+    }
+}
