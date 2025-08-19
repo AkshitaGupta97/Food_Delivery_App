@@ -86,10 +86,12 @@ header .navbar {
     align-items: center;
     justify-content: space-between;
     gap: 20px;
-    padding: 22px;
+    padding: 12px;
 }
 .navbar .nav-logo .logo-text {
     color: var(--primaryOrange);
+    text-align: center;
+    margin-top: 14px;
 }
 .navbar .nav-menu .nav-link {
     color: var(--yellow);
@@ -97,8 +99,18 @@ header .navbar {
     font-size: 600;
     transition: 0.3s ease-in;
 }
+header .heading {
+    display: flex;
+    gap: 10px;
+    text-align: center;
+}
+header .heading img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+}
 .navbar .nav-menu .nav-link:hover {
-    color: orange;
+    color: var(--leafGreen);
     text-decoration: underline;
     text-underline-offset: 4px; /* this will create gap between word and underline*/
 }
@@ -110,6 +122,24 @@ header .navbar {
 .navbar :where(#menu-open-btn, #menu-close-btn){
     display: none;
 }
+
+/*  hero Section */
+.hero-section{
+    min-height: calc(100vh - 88px);
+    min-height: 100vh;
+    overflow: hidden;
+}
+.hero-section .section-content {
+   padding: 5rem;
+   padding-top: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+
 
 @media screen and (max-width: 900px) {
    
