@@ -9,3 +9,7 @@ menuOpen.addEventListener('click', () => {
 menuClose.addEventListener('click', ()=>{
     menuOpen.click();
 })
+
+window.addEventListener("DOMContentLoaded", () => {
+    document.querySelector('.hero-section').classList.add('show');
+})

@@ -17,7 +17,7 @@
     --cream: #f6e7bb;
     --leafGreen: #43A047;
     --beigeBack: #e6d7b0;
-    --black: #000000f4;
+    --black: #000000;
 
     
 
@@ -110,7 +110,7 @@ header .heading img {
     object-fit: cover;
 }
 .navbar .nav-menu .nav-link:hover {
-    color: var(--leafGreen);
+    color: var(--beigeBack);
     text-decoration: underline;
     text-underline-offset: 4px; /* this will create gap between word and underline*/
 }
@@ -125,20 +125,71 @@ header .heading img {
 
 /*  hero Section */
 .hero-section{
-    min-height: calc(100vh - 88px);
+    min-height: calc(100vh - 94px);
     min-height: 100vh;
     overflow: hidden;
+
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.hero-section.show{
+    opacity: 1;
+    transform: scale(1);
 }
 .hero-section .section-content {
-   padding: 5rem;
-   padding-top: 4rem;
+    padding-left: 3rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
+.hero-section .hero-details .title {
+    font-size: 2rem;
+    color: var(--primaryOrange);
+    letter-spacing: 1px;
+    text-align: center;
+}
+.hero-section .hero-details .subtitle {
+    font-size: 1.2rem;
+    margin-top: 12px;
+    font-weight: 600;
+}
+.hero-section .hero-details .description {
+    color: var(--charcol);
+    max-width: 70%;
+    margin: 24px 0 40px;
+}
+.hero-section .hero-details .buttons {
+    display: flex;
+    gap: 28px;
+}
+.hero-section .hero-details .button {
+    padding: 10px 20px;
+    border-radius: 16px;
+    background-color: var(--black);
+    color: var(--yellow);
+    font-weight: 600;
+    transition: 0.3s ease;
+    margin-top: 12px;
+}
 
-
-
+.hero-section .section-content .hero-image {
+    max-width: 50%;
+    margin-right: 1rem;
+    margin-top: 2rem;
+}
+.hero-section .hero-details .button:hover, 
+ .hero-section .hero-details .contact-us {
+    background-color: transparent;
+    border:2px solid var(--primaryOrange);
+    color: var(--yellow);
+}
+.hero-section .hero-details .contact-us:hover {
+    background-color: var(--black);
+    color: var(--yellow);
+    border: none;
+}
 
 
 @media screen and (max-width: 900px) {
@@ -200,4 +251,29 @@ header .heading img {
         color: var(--offWhite);
         font-size: 22px;
     }
+
+    /* Hero section */
+    .hero-section .section-content {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 30px 20px 20px;
+        justify-content: center;
+    }
+    .hero-section .section-content .hero-image {
+        max-width: 70%;
+        margin: 0 auto;
+        margin-top: 5rem;
+    }
+    .section-content .hero-details :is(.subtitle, .description){
+        max-width: 100%;
+    }
+    .hero-details .subtitle {
+        font-size: 12px;
+        font-weight: 500;
+   }
+   .hero-details .buttons {
+        justify-content: center;
+   }
+
+
 }
