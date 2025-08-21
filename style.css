@@ -14,7 +14,7 @@
     --offWhite: #f6efef;
     --charcol: #1C1C1C;
     --yellow: #f2930f;
-    --cream: #f6e7bb;
+    --cream: #faedc8;
     --leafGreen: #43A047;
     --beigeBack: #e6d7b0;
     --black: #000000;
@@ -242,6 +242,54 @@ header .heading img {
     color: var(--yellow);
     transform: scale(1.2);
 }
+
+/* Menu Section */
+.menu-section {
+    background-color: rgba(7, 7, 7, 0.874);
+    padding: 4rem 0;
+    color: var(--offWhite);
+}
+.menu-section .menu-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 80px;
+}
+.menu-section .menu-item {
+    border: 2px solid rgb(255, 216, 144);
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 2px 1px 3px rgb(169, 167, 167);
+}
+.menu-list .menu-item {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    width: calc(100% / 3 - 80px);
+}
+.menu-list .menu-item .menu-name {
+    margin: 12px 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--yellow);
+}
+.menu-list .menu-item .menu-text {
+    font-size: 16px;
+    line-height: 30px;
+    text-align: center;
+}
+.menu-list .menu-item .menu-img {
+    width: 70%;
+}
+.menu-list .menu-item .add-to-cart{
+    color: var(--offWhite);
+    background-color: var(--primaryOrange);
+    padding: 10px 12px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 600;
+}
 @media screen and (max-width: 900px) {
    
     /* this will add blurLay effect on page, as when show-mobile-menu is clicked, the background should be blured.*/
@@ -332,7 +380,7 @@ header .heading img {
         padding: 1rem;
     }
     .about-section .section-content .text {
-        width: 90%;
+        width: 100%;
     }
     .about-section .section-content .about-image {
         width: 70%;
