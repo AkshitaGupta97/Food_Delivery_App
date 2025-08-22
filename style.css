@@ -314,3 +314,10 @@ header .heading img {
     color: var(--dark-pink);
     font-weight: 600;
 }
+.menu-section .section-content .menu-btn-search{
+    padding: 10px 12px;
+    border-radius: 8px;
+    background-color: var(--leafGreen);
+    color: var(--offWhite);
+    font-weight: 600;
+}
