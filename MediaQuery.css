@@ -101,6 +101,7 @@
     }
     .menu-list .menu-item {
         width: calc(100% / 2 - 80px);
+        padding: 30px;
     }
     .menu-list .menu-item .menu-img {
         width: 50%;
