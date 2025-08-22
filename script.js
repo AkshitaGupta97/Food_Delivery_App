@@ -13,3 +13,7 @@ menuClose.addEventListener('click', ()=>{
 window.addEventListener("DOMContentLoaded", () => {
     document.querySelector('.hero-section').classList.add('show');
 })
+
+fetch('https://free-food-menus-api-two.vercel.app/burgers')
+  .then(res => res.json())
+  .then(data => console.log(data));

@@ -290,6 +290,31 @@ header .heading img {
     font-size: 12px;
     font-weight: 600;
 }
+.menu-section .section-content #menu-form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+.section-content #menu-form label {
+    color: var(--primaryOrange);
+    padding: 10px;
+   text-decoration: underline;
+   font-size: 16px;
+}
+.section-content #menu-form input {
+    color: var(--yellow);
+    padding: 10px 12px;
+    border-radius: 6px;
+
+}
+.section-content #menu-form input::placeholder {
+    color: var(--dark-pink);
+    font-weight: 600;
+}
 @media screen and (max-width: 900px) {
    
     /* this will add blurLay effect on page, as when show-mobile-menu is clicked, the background should be blured.*/
@@ -386,5 +411,7 @@ header .heading img {
         width: 70%;
         aspect-ratio: 1;
     }
+    /* Menu section*/
+    
 
 }
