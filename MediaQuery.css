@@ -97,11 +97,11 @@
     }
     /* Menu section*/
     .menu-section .menu-list {
-        gap: 20px;
+        gap: 10px;
     }
     .menu-list .menu-item {
-        width: calc(100% / 2 - 20px);
-        padding: 30px;
+        width: calc(100% / 2 - 10px);
+        padding: 10px;
     }
     .menu-list .menu-item .menu-img {
         width: 80%;
