@@ -35,8 +35,8 @@ const fetchFood = async() => {
         itemDiv.innerHTML = `
             <img src="${elem.image}" alt="" class="menu-img">
             <h3 class="menu-name">${elem.name}</h3>
-            <p class="menu-ancestry">Ancestry : <span> ${elem.cuisine}</span></p>
-            <h4 class="menu-price">Pay : ₹ ${price} <h4>
+            <p class="menu-ancestry">Ancestry : ${elem.cuisine}</p>
+            <h4 class="menu-price">Pay : <span class="menu-amount">₹ ${price}</span> <h4>
         `
         /* <p class="menu-text">${elem.instructions[4]}</p> */
 

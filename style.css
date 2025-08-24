@@ -275,13 +275,23 @@ header .heading img {
     font-weight: 600;
     color: var(--yellow);
 }
-.menu-list .menu-item .menu-text {
+.menu-list .menu-item .menu-ancestry {
     font-size: 16px;
     line-height: 30px;
     text-align: center;
+    color: #fceba4;
 }
+.menu-list .menu-item .menu-price{
+    color: #fadbe0;
+    margin: 12px;
+}
+.menu-list .menu-item .menu-amount {
+    color: rgb(202, 68, 68);
+}
+
 .menu-list .menu-item .menu-img {
     width: 70%;
+    border-radius: 8px;
 }
 .menu-list .menu-item .add-to-cart{
     color: var(--offWhite);
@@ -304,7 +314,7 @@ header .heading img {
     font-weight: 600;
 }
 .section-content .menu-form label {
-    color:var(--leafGreen);
+    color: rgb(255, 217, 146);
     padding: 10px;
    font-size: 22px;
 }
