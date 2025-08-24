@@ -253,7 +253,7 @@ header .heading img {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 80px;
+    gap: 60px;
 }
 .menu-section .menu-item {
     border: 2px solid rgb(255, 216, 144);
@@ -266,9 +266,10 @@ header .heading img {
     align-items: center;
     flex-direction: column;
     justify-content: space-between;
-    width: calc(100% / 3 - 80px);
+    width: calc(100% / 3 - 60px);
 }
 .menu-list .menu-item .menu-name {
+    text-align: center;
     margin: 12px 0;
     font-size: 16px;
     font-weight: 600;
@@ -290,6 +291,9 @@ header .heading img {
     font-size: 12px;
     font-weight: 600;
 }
+.menu-list .menu-item .add-to-cart:hover {
+    background-color: #ff7053;
+}
 .menu-section .section-content .menu-form{
     display: flex;
     align-items: center;
@@ -300,10 +304,9 @@ header .heading img {
     font-weight: 600;
 }
 .section-content .menu-form label {
-    color: var(--primaryOrange);
+    color:var(--leafGreen);
     padding: 10px;
-   text-decoration: underline;
-   font-size: 16px;
+   font-size: 22px;
 }
 .section-content .menu-form input {
     color: var(--yellow);
@@ -321,3 +324,7 @@ header .heading img {
     color: var(--offWhite);
     font-weight: 600;
 }
+.menu-section .section-content .menu-btn-search:hover {
+    background-color: rgb(103, 235, 103);
+}
+
