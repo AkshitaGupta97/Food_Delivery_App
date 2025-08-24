@@ -97,10 +97,10 @@
     }
     /* Menu section*/
     .menu-section .menu-list {
-        gap: 50px;
+        gap: 20px;
     }
     .menu-list .menu-item {
-        width: calc(100% / 2 - 50px);
+        width: calc(100% / 2 - 20px);
         padding: 30px;
     }
     .menu-list .menu-item .menu-img {
