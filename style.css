@@ -286,7 +286,7 @@ header .heading img {
     margin: 12px;
 }
 .menu-list .menu-item .menu-amount {
-    color: rgb(202, 68, 68);
+    color: orangered;
 }
 
 .menu-list .menu-item .menu-img {
@@ -319,13 +319,14 @@ header .heading img {
    font-size: 22px;
 }
 .section-content .menu-form input {
-    color: var(--yellow);
+    color: var(--charcol);
     padding: 10px 12px;
     border-radius: 6px;
+     font-weight: 600;
+    font-size: 14px;
 }
 .section-content .menu-form input::placeholder {
     color: var(--dark-pink);
-    font-weight: 600;
 }
 .menu-section .section-content .menu-btn-search{
     padding: 10px 12px;
