@@ -275,6 +275,11 @@ header .heading img {
     font-weight: 600;
     color: var(--yellow);
 }
+.menu-list .menu-item .menu-name-err {
+    color: gold;
+    font-size: 16px;
+    font-weight: 600;
+}
 .menu-list .menu-item .menu-ancestry {
     font-size: 16px;
     line-height: 30px;

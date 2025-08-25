@@ -18,16 +18,25 @@ menuClose.addEventListener('click', ()=>{
 
 window.addEventListener("DOMContentLoaded", () => {
     document.querySelector('.hero-section').classList.add('show');
+    fetchFood("")
 })
 
 menuLists.innerHTML = "";
-const fetchFood = async() => {
+const fetchFood = async(foodItem) => {
     const response = await fetch(`https://dummyjson.com/recipes`);
     const data = await response.json();
     console.log(data);
     
     menuLists.innerHTML = "";
-    data.recipes.forEach(elem => {
+    // filter recipes based on search input
+    const filterRecipes = data.recipes.filter(recipe => recipe.name.toLowerCase().includes(foodItem.toLowerCase()));
+    // if no matches found
+    if(filterRecipes.length === 0){
+      menuLists.innerHTML = `<p class="menu-name-err">No Recipe Found ...</p>`
+      return;
+    }
+    // render filtered recipes
+    filterRecipes.forEach(elem => {
         const itemDiv = document.createElement('div');
         itemDiv.classList.add('menu-item');
         const price = elem.id + 530
@@ -56,7 +65,7 @@ const fetchFood = async() => {
 foodSearchBtn.addEventListener('click', (event) => {
     event.preventDefault();
     const foodItem = foodInput.value.trim();
-
+    console.log(foodItem)
     fetchFood(foodItem);
 })
 

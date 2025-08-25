@@ -1,3 +1,17 @@
+
+/*  Responsive media for 1024px  */
+@media screen and (max-width: 1024px){
+    .menu-section .menu-list {
+        gap: 40px;
+    }
+    .menu-section .menu-list .menu-item {
+        width: calc(100% / 2 - 40px);
+    }
+}
+
+
+
+
 @media screen and (max-width: 900px) {
 
     /* this will add blurLay effect on page, as when show-mobile-menu is clicked, the background should be blured.*/
@@ -110,18 +124,18 @@
         width: 70%;
         aspect-ratio: 1;
     }
+}
 
+/* Responsive media  for 640px*/
+@media screen and (max-width: 500px){
     /* Menu section*/
     .menu-section {
-        padding: 3rem 0;
+        padding: 2rem 0;
     }
     .menu-section .menu-list {
-        gap: 40px;  
+        gap: 30px;  
     }
-    .menu-list .menu-item {
-        width: calc(100% / 2 - 40px);
-        font-size: 12px;
-        font-weight: 400;
+    .menu-section .menu-list .menu-item{
+        width:90%;
     }
-
 }
