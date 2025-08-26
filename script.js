@@ -25,9 +25,8 @@ menuLists.innerHTML = "";
 const fetchFood = async(foodItem) => {
     const response = await fetch(`https://dummyjson.com/recipes`);
     const data = await response.json();
-    console.log(data);
+   // console.log(data);
     
-    menuLists.innerHTML = "";
     // filter recipes based on search input
     const filterRecipes = data.recipes.filter(recipe => recipe.name.toLowerCase().includes(foodItem.toLowerCase()));
     // if no matches found
@@ -39,7 +38,7 @@ const fetchFood = async(foodItem) => {
     filterRecipes.forEach(elem => {
         const itemDiv = document.createElement('div');
         itemDiv.classList.add('menu-item');
-        const price = elem.id + 530
+        const price = elem.id + 535
 
         itemDiv.innerHTML = `
             <img src="${elem.image}" alt="" class="menu-img">
@@ -49,13 +48,25 @@ const fetchFood = async(foodItem) => {
         `
         /* <p class="menu-text">${elem.instructions[4]}</p> */
 
+        const IncreaseDecreaseItem = document.createElement('div');
+        IncreaseDecreaseItem.classList.add("menu-increase-decrease");
+        IncreaseDecreaseItem.innerHTML = `
+           <p class="menu-product">Foods : </p>
+            
+            <div class="menu-inc-dec">
+              <button class="menu-increase">+</button>
+              <p class="menu-quantity">1</p>
+              <button class="menu-decrease">-</button>
+            </div>
+        `
+
         const AddToCart = document.createElement('button');
         AddToCart.classList.add('add-to-cart');
         AddToCart.textContent = "Add to Cart";
 
+        itemDiv.appendChild(IncreaseDecreaseItem);
         itemDiv.appendChild(AddToCart);
         menuLists.appendChild(itemDiv)
-
 
     })
     
